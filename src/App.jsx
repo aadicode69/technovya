@@ -1,17 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <img src="https://plus.unsplash.com/premium_photo-1677094310899-02303289cadf?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cm9ib3R8ZW58MHx8MHx8fDA%3D" alt="imggii" className='h-fit w-fit' />
-      </div>
-    </>
-  )
-}
+    <div className="min-h-screen bg-gray-100">
+      <Routes>
+        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/" element={<Home/>} />
+      </Routes>
+    </div>
+  );
+};
 
-export default App
+export default App;
